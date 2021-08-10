@@ -1,10 +1,14 @@
 ﻿@using Tsi.Template.ViewModels.Catalog;
 @model ProductViewModel
 
+@{
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Create product</h5>
-        <form asp-controller="Product" asp-action="Edit" method="post"> 
+        <form asp-controller="Product" asp-action="Edit" method="post">
             <div class="form-group">
                 @Html.DisplayNameFor(model => model.Code)
                 <input type="text" id="Code" name="Code" class="form-control" value="@Model.Code" disabled />

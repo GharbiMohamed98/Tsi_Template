@@ -2,6 +2,9 @@
 @using Tsi.Template.Helpers.grh
 @model IEnumerable<EmployeeViewModel>
 
+@{
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
 
 <section class="content">
     <div class="container-fluid">
@@ -38,18 +41,18 @@
                                 @foreach (EmployeeViewModel item in Model)
                                 {
                                     index++;
-                                <tr>
-                                    <th scope="row">@index</th>
-                                    <td>@item.FirstName</td>
-                                    <td>@item.LastName</td>
-                                    <td>@item.DepartementName</td>
-                                    <td>
-                                        @Html.ActionLink("Delete", "Delete", "Employee", new { id = item.Id }, null)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Edit", "Edit", "Employee", item, null)
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <th scope="row">@index</th>
+                                        <td>@item.FirstName</td>
+                                        <td>@item.LastName</td>
+                                        <td>@item.DepartementName</td>
+                                        <td>
+                                            @Html.ActionLink("Delete", "Delete", "Employee", new { id = item.Id }, null)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", "Employee", item, null)
+                                        </td>
+                                    </tr>
                                 }
                             </tbody>
                         </table>

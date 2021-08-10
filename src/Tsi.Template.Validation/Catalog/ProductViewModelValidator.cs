@@ -31,7 +31,7 @@ namespace Tsi.Template.Validation.Catalog
 
         private bool ValidateSommeEcritureDetail(ProductViewModel arg)
         {
-            return false;
+            return true;
         } 
     }
 }
