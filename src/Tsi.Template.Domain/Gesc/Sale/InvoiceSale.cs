@@ -12,7 +12,11 @@ namespace Tsi.Template.Domain.Gesc.Sale
         public int Number { get; set; }
         public int CustomerId { get; set; }
         public System.DateTime Date { get; set; }
-        public decimal Amount { get; set; } // not mapped
+        public decimal AmountHT { get; set; } // not mapped
+        public string Notes  { get; set; }
+        public System.DateTime EntryDate { get; set; }
+        public int CreationUserId { get; set; }
+        public int ModifUserId { get; set; }
         public Customer Customer { get; set; }
     }
 }
